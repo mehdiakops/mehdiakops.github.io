@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Case study: migrating a B2B SaaS knowledge base to a new CMS while protecting organic search traffic.">
+<meta property="og:title" content="Knowledge base CMS migration - Mehdia Riaz">
+<meta property="og:description" content="Case study: migrating a B2B SaaS knowledge base to a new CMS while protecting organic search traffic.">
+<meta property="og:type" content="website">
+<title>Knowledge base CMS migration - Mehdia Riaz</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Mehdia Riaz, home">
+<svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+<rect x="1" y="2.5" width="18" height="3.4" rx="1.7" fill="var(--accent)"/>
+<rect x="1" y="8.3" width="12.5" height="3.4" rx="1.7" fill="var(--ink)" opacity=".82"/>
+<rect x="1" y="14.1" width="7.5" height="3.4" rx="1.7" fill="var(--ink)" opacity=".42"/>
+</svg>
+<span class="brand-name">Mehdia Riaz</span>
+</a>
+<nav class="main-nav" aria-label="Main">
+<a href="case-studies.html">Case Studies</a>
+<a href="insights.html">Insights</a>
+<a href="services.html">Services</a>
+</nav>
+<div class="header-cta">
+<a class="btn" href="contact.html">Contact</a>
+</div>
+</div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<a class="back-link" href="case-studies.html">&larr; All case studies</a>
+
+<div class="page-head">
+<span class="eyebrow">Case Study &middot; Motive</span>
+<h1>Moving an entire knowledge base to a new CMS without losing the traffic</h1>
+</div>
+
+<div class="facts">
+<div class="fact"><div class="fact-label">Role</div><div class="fact-value">Technical Writer &amp; SEO Lead</div></div>
+<div class="fact"><div class="fact-label">Scope</div><div class="fact-value">Full knowledge base, 2,000+ articles</div></div>
+<div class="fact"><div class="fact-label">Partners</div><div class="fact-value">Engineering, Support, Marketing SEO</div></div>
+<div class="fact"><div class="fact-label">Outcome</div><div class="fact-value">Minimal organic traffic loss</div></div>
+</div>
+
+<div class="cs-body">
+
+<h2>The problem</h2>
+<p>
+Our knowledge base had grown into one of the highest-traffic properties Motive owned. A large share
+of the people reading it had arrived from a search engine, not from inside the product. That made the
+knowledge base a support asset and an acquisition asset at the same time, and it made the planned CMS
+change riskier than it looked on the project board.
+</p>
+<p>
+CMS migrations fail in a specific and predictable way. URLs change, redirects get missed or
+misconfigured, crawlers find broken paths, rankings slip, and the traffic decline shows up six weeks
+later when everyone has moved on to the next project. By then the cause is hard to isolate and the
+recovery is slow.
+</p>
+
+<div class="todo">
+<strong>Fill this in:</strong> name the old and new platforms if you are allowed to, and add one
+concrete number that sizes the stakes. Monthly organic sessions, percentage of Help Center traffic
+arriving from search, or number of articles ranking on page one all work. One number here does more
+than three paragraphs of description.
+</div>
+
+<h2>What constrained the work</h2>
+<ul>
+<li>The migration date was set by the platform contract, not by content readiness.</li>
+<li>The URL structure on the new CMS was not a one-to-one match with the old one, so redirects could not be generated mechanically.</li>
+<li>Support agents linked to specific articles inside live customer tickets, so broken links would surface as customer-facing failures immediately, not just as an SEO metric.</li>
+<li>Regular publishing could not stop. Product releases kept shipping throughout.</li>
+</ul>
+
+<div class="todo">
+<strong>Check this list.</strong> These are the constraints that typically apply to a migration of
+this shape. Cut anything that was not true for you and add the one that actually kept you up at
+night, because that is the detail an interviewer will follow up on.
+</div>
+
+<h2>What I did</h2>
+<p>
+<strong>Mapped before migrating.</strong> I built a complete inventory of the existing knowledge base
+and mapped every URL to its destination on the new platform before any content moved. Articles being
+consolidated or retired needed a deliberate decision about where their traffic should land, rather
+than a default redirect to the homepage, which passes almost no value and frustrates the reader.
+</p>
+<p>
+<strong>Prioritised by traffic, not by alphabet.</strong> Not every article carried the same risk. I
+ranked the inventory by organic sessions and inbound link volume so the highest-value pages got
+individually verified mapping while the long tail could be handled in patterns.
+</p>
+<p>
+<strong>Partnered with Engineering on the redirect layer.</strong> The mapping was mine, the
+implementation was theirs, and the handoff format mattered. I delivered redirects in a structure
+Engineering could apply directly rather than a document they had to interpret.
+</p>
+<p>
+<strong>Built QA into launch, not after it.</strong> We verified redirect behaviour, canonical tags,
+sitemap generation and internal link integrity as launch criteria rather than as post-launch cleanup.
+</p>
+<p>
+<strong>Watched the recovery curve.</strong> Organic performance after a migration always dips before
+it settles. I tracked indexation and traffic through that window so we could tell a normal re-crawl
+dip apart from an actual problem, and fix the real issues quickly.
+</p>
+
+<div class="todo">
+<strong>This is the section to make specific.</strong> Add the tools you used for the crawl and
+mapping, roughly how long the mapping took, and one decision you had to argue for. A disagreement you
+won, or lost, is the single most memorable thing you can put in a case study.
+</div>
+
+<h2>What happened</h2>
+<p>
+The knowledge base moved to the new CMS with minimal organic traffic loss. Support agents kept their
+existing article links working. Publishing continued through the migration window without a freeze.
+</p>
+
+<div class="callout">
+Add the actual figures here if you have access to them. Something like "organic sessions recovered to
+pre-migration levels within X weeks" or "traffic loss held under X percent at 90 days" is worth more
+than every other sentence on this page. If you do not have the numbers, say what you measured and
+describe the result qualitatively. Never estimate.
+</div>
+
+<h2>What I would do differently</h2>
+<p>
+The mapping work was sound. The thing I would change is when it started. I built the inventory once
+the migration was already scheduled, which meant the retire-or-consolidate decisions were made under
+time pressure. A content audit that runs continuously, rather than one triggered by a platform
+change, would have meant arriving at the migration with a smaller and cleaner base to move.
+</p>
+<p>
+I would also have pushed harder for a staging environment with a representative content sample
+earlier in the process. Several structural issues were discoverable well before launch week.
+</p>
+
+<div class="todo">
+<strong>Rewrite this in your own words.</strong> This is a plausible reflection, but the section only
+works if it is true. It is also the part that signals seniority most clearly, so it is worth the
+time. If nothing here matches, replace it entirely with the thing you actually regret.
+</div>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="wrap footer-inner">
+<div class="footer-col">
+<p><strong>Mehdia Riaz</strong><br>Senior Content Strategist, knowledge systems for B2B SaaS.<br>Abbottabad, Pakistan. Available remotely.</p>
+</div>
+<div class="footer-col">
+<div class="footer-links">
+<a href="case-studies.html">Case Studies</a>
+<a href="insights.html">Insights</a>
+<a href="services.html">Services</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
+<a href="https://www.linkedin.com/in/mehdia-riaz" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

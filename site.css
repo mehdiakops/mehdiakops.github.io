@@ -1,0 +1,169 @@
+/* ============================================================
+   site.css - layout for the content pages.
+   Loaded by every page except cv.html.
+   ============================================================ */
+
+/* ---------- HOME HERO ---------- */
+.hero{max-width:760px;padding-bottom:8px}
+.hero h1{margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
+
+.proof-row{
+  display:flex;gap:28px;flex-wrap:wrap;
+  margin-top:40px;padding-top:26px;border-top:1px solid var(--line);
+}
+.proof{min-width:120px}
+.proof-num{font-size:23px;font-weight:820;letter-spacing:-.8px;line-height:1.1}
+.proof-lbl{margin-top:3px;color:var(--muted);font-size:12px;line-height:1.45;max-width:160px}
+
+/* ---------- EXPERTISE ---------- */
+.expertise-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:26px;
+}
+.expertise h3{font-size:var(--t-md);font-weight:780;margin-bottom:8px}
+.expertise p{color:var(--muted);font-size:14.5px;line-height:1.68}
+.expertise .rule{width:30px;height:2.5px;background:var(--accent);margin-bottom:14px;border-radius:2px}
+
+/* ---------- WORK CARDS ---------- */
+.work-list{display:grid;gap:14px}
+.work-card{
+  display:block;padding:26px 28px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+a.work-card:hover{
+  text-decoration:none;border-color:#CFD8E8;
+  box-shadow:0 8px 26px rgba(28,27,25,.07);transform:translateY(-2px);
+}
+.work-meta{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:11px;
+  color:var(--muted);font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+}
+.work-card h3{color:var(--ink);margin-bottom:9px;font-size:var(--t-lg)}
+.work-card p{color:var(--muted);font-size:14.5px;line-height:1.66;max-width:62ch}
+.work-more{
+  display:inline-block;margin-top:15px;
+  color:var(--accent);font-size:13.5px;font-weight:700;
+}
+
+/* ---------- CASE STUDY BODY ---------- */
+.cs-body{max-width:var(--reading)}
+.cs-body h2{font-size:var(--t-xl);margin:46px 0 16px}
+.cs-body h2:first-child{margin-top:0}
+.cs-body p{margin-bottom:17px;line-height:1.78}
+.cs-body p strong{font-weight:720}
+.cs-body ul{list-style:none;margin:0 0 20px}
+.cs-body li{position:relative;padding-left:22px;margin-bottom:10px;line-height:1.7}
+.cs-body li::before{
+  content:"";position:absolute;left:2px;top:.72em;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;margin:34px 0 8px;
+}
+.fact{padding:16px 18px;background:var(--surface)}
+.fact-label{
+  color:var(--muted);font-size:10px;font-weight:800;
+  letter-spacing:1.1px;text-transform:uppercase;margin-bottom:5px;
+}
+.fact-value{font-size:14px;font-weight:720;line-height:1.4}
+
+.callout{
+  margin:28px 0;padding:20px 22px;max-width:var(--reading);
+  background:var(--tint);border-left:3px solid var(--accent);
+  border-radius:0 var(--radius) var(--radius) 0;
+  font-size:15px;line-height:1.72;
+}
+
+.todo{
+  margin:26px 0;padding:18px 20px;max-width:var(--reading);
+  border:1px dashed #D9A441;border-radius:var(--radius);
+  background:#FDF7EA;color:#7A5714;
+  font-size:14px;line-height:1.68;
+}
+.todo strong{color:#5E410A;font-weight:800}
+
+.back-link{
+  display:inline-block;margin-bottom:24px;
+  color:var(--muted);font-size:13px;font-weight:650;
+}
+.back-link:hover{color:var(--accent)}
+
+/* ---------- INSIGHTS ---------- */
+.insight-list{display:grid;gap:2px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.insight{
+  display:block;padding:22px 4px;background:var(--bg);
+  transition:background .16s ease;
+}
+a.insight:hover{background:var(--surface);text-decoration:none}
+.insight-date{color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
+.insight h3{color:var(--ink);font-size:var(--t-md);margin:6px 0 7px}
+.insight p{color:var(--muted);font-size:14.5px;line-height:1.65;max-width:62ch}
+
+.empty-state{
+  padding:40px 30px;text-align:center;
+  background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);
+}
+.empty-state p{color:var(--muted);font-size:14.5px;max-width:48ch;margin:0 auto}
+
+/* ---------- SERVICES ---------- */
+.service{
+  padding:28px 0;border-bottom:1px solid var(--line);
+}
+.service:last-of-type{border-bottom:0}
+.service h3{margin-bottom:9px}
+.service p{color:var(--muted);max-width:62ch;line-height:1.7}
+.service ul{list-style:none;margin-top:13px}
+.service li{position:relative;padding-left:20px;margin-bottom:7px;color:var(--muted);font-size:14.5px}
+.service li::before{
+  content:"";position:absolute;left:2px;top:.68em;
+  width:5px;height:5px;border-radius:50%;background:var(--accent);
+}
+
+/* ---------- CONTACT FORM ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:56px;align-items:start}
+.form-field{margin-bottom:18px}
+.form-field label{
+  display:block;margin-bottom:6px;
+  font-size:13px;font-weight:700;letter-spacing:.1px;
+}
+.form-field input,
+.form-field textarea,
+.form-field select{
+  width:100%;padding:11px 13px;
+  border:1.5px solid var(--line);border-radius:9px;
+  background:var(--surface);color:var(--ink);
+  font-family:inherit;font-size:14.5px;line-height:1.5;
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+.form-field textarea{min-height:140px;resize:vertical}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus{
+  outline:none;border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(31,90,224,.13);
+}
+.form-hint{margin-top:6px;color:var(--muted);font-size:12.5px}
+.form-note{margin-top:14px;color:var(--muted);font-size:12.5px;line-height:1.6}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+.aside-card{
+  padding:24px 26px;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);
+}
+.aside-card h3{font-size:var(--t-md);margin-bottom:10px}
+.aside-card p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:14px}
+.aside-card p:last-child{margin-bottom:0}
+.aside-list{display:grid;gap:10px;margin-top:14px}
+.aside-list a{font-size:14px;font-weight:650}
+
+@media (max-width:860px){
+  .contact-grid{grid-template-columns:1fr;gap:34px}
+  .proof-row{gap:20px}
+  .work-card{padding:22px 20px}
+  .cs-body h2{margin:34px 0 13px}
+}
