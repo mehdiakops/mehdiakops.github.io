@@ -1,0 +1,9 @@
+# Site in progress. On launch day, delete everything above the marker
+# and uncomment the two lines at the bottom.
+
+User-agent: *
+Disallow: /
+
+# ---- LAUNCH DAY ----
+# User-agent: *
+# Allow: /

@@ -1,0 +1,130 @@
+/* ============================================================
+   cv.css - CV page layout and print rules.
+   Loaded by cv.html only, alongside base.css.
+   ============================================================ */
+
+.cv{max-width:840px}
+
+.cv-header{padding-bottom:28px;border-bottom:2px solid var(--ink)}
+.cv-header h1{font-size:clamp(32px,4.6vw,46px);margin-bottom:9px;letter-spacing:-2px}
+.cv-role{color:var(--accent);font-size:var(--t-md);font-weight:750;margin-bottom:14px}
+.cv-contact{
+  display:flex;flex-wrap:wrap;gap:6px 22px;
+  color:var(--muted);font-size:13.5px;font-weight:600;
+}
+.cv-actions{margin:28px 0 0;display:flex;gap:12px;flex-wrap:wrap}
+
+.cv-section{margin-top:40px}
+.cv-section > h2{
+  font-size:var(--t-xs);font-weight:850;letter-spacing:2.2px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:17px;padding-bottom:9px;border-bottom:1px solid var(--line);
+}
+
+.cv-summary{max-width:var(--reading);line-height:1.76}
+.cv-summary strong{font-weight:750}
+
+.cv-role-block{margin-bottom:28px}
+.cv-role-block:last-child{margin-bottom:0}
+.cv-role-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:14px;flex-wrap:wrap;margin-bottom:2px;
+}
+.cv-role-title{font-size:var(--t-md);font-weight:800;letter-spacing:-.2px}
+.cv-role-date{color:var(--muted);font-size:12.5px;font-weight:700;white-space:nowrap}
+.cv-company{color:var(--muted);font-size:13.5px;font-weight:600;margin-bottom:12px}
+.promoted{
+  display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;
+  background:var(--tint);color:var(--accent);
+  font-size:9.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
+}
+
+.cv-bullets{list-style:none}
+.cv-bullets li{position:relative;padding-left:20px;margin-bottom:8px;font-size:14.5px;line-height:1.62}
+.cv-bullets li::before{
+  content:"";position:absolute;left:2px;top:.68em;
+  width:5px;height:5px;border-radius:50%;background:var(--accent);
+}
+.cv-bullets li strong{font-weight:720}
+
+.cv-project{margin-bottom:16px}
+.cv-project:last-child{margin-bottom:0}
+.cv-project-name{font-size:14.5px;font-weight:750;margin-bottom:4px}
+.status{
+  display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  font-size:9.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;vertical-align:middle;
+}
+.status.live{background:var(--tint);border-color:transparent;color:var(--accent)}
+.cv-project p{font-size:14px;line-height:1.62;color:var(--muted);max-width:var(--reading)}
+
+.cv-tags{display:flex;flex-wrap:wrap;gap:7px}
+.cv-tags span{
+  padding:4px 12px;border:1px solid var(--line);border-radius:999px;
+  background:var(--surface);font-size:12.5px;
+}
+.cv-group{margin-bottom:16px}
+.cv-group:last-child{margin-bottom:0}
+.cv-group-name{
+  color:var(--muted);font-size:10px;font-weight:850;
+  letter-spacing:1.3px;text-transform:uppercase;margin-bottom:8px;
+}
+
+.cv-split{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.cv-line{padding:10px 0;border-bottom:1px solid var(--line)}
+.cv-line:last-child{border-bottom:0}
+.cv-line-title{font-size:13.5px;font-weight:720;line-height:1.4}
+.cv-line-sub{margin-top:3px;color:var(--muted);font-size:12.5px}
+
+@media (max-width:700px){
+  .cv-split{grid-template-columns:1fr;gap:26px}
+  .cv-role-head{display:block}
+  .cv-role-date{display:block;margin-top:2px}
+}
+
+/* ============================================================
+   PRINT - one clean column, no site chrome
+   ============================================================ */
+@media print{
+  @page{margin:14mm 13mm}
+
+  .site-header,.site-footer,.cv-actions,.skip{display:none !important}
+
+  body{background:#fff;font-size:10.3px;line-height:1.48}
+  main{padding:0}
+  .wrap{width:100%;max-width:none}
+  .cv{max-width:none}
+  a{color:var(--ink);text-decoration:none}
+
+  .cv-header{padding-bottom:12px;border-bottom-width:1.5px}
+  .cv-header h1{font-size:25px;margin-bottom:3px;letter-spacing:-1px}
+  .cv-role{font-size:12px;margin-bottom:6px}
+  .cv-contact{font-size:9.5px;gap:3px 14px}
+
+  .cv-section{margin-top:15px}
+  .cv-section > h2{font-size:9px;margin-bottom:8px;padding-bottom:4px;letter-spacing:1.8px}
+  .cv-summary{font-size:10.3px;line-height:1.55;max-width:none}
+
+  .cv-role-block{margin-bottom:12px;break-inside:avoid}
+  .cv-role-title{font-size:11.5px}
+  .cv-role-date{font-size:9.5px}
+  .cv-company{font-size:9.8px;margin-bottom:5px}
+  .cv-bullets li{font-size:10.2px;line-height:1.45;margin-bottom:3px;padding-left:14px}
+  .cv-bullets li::before{width:3.5px;height:3.5px;left:2px}
+
+  .cv-project{margin-bottom:7px;break-inside:avoid}
+  .cv-project-name{font-size:10.5px}
+  .cv-project p{font-size:9.8px;line-height:1.45;max-width:none}
+
+  .cv-tags{gap:0}
+  .cv-tags span{border:0;background:none;padding:0;font-size:9.8px}
+  .cv-tags span:not(:last-child)::after{content:" \\00b7 "}
+  .cv-group{margin-bottom:6px}
+  .cv-group-name{font-size:8.5px;margin-bottom:2px}
+
+  .cv-split{gap:22px}
+  .cv-line{padding:4px 0}
+  .cv-line-title{font-size:10px}
+  .cv-line-sub{font-size:9.2px}
+
+  .status,.promoted{border:0;background:none;padding:0 0 0 5px;font-size:8.5px}
+}
